@@ -1,0 +1,62 @@
+{% load static %}
+{% load i18n %}
+<section id="fh5co-footer" data-section="contacts">
+<div id="fh5co-footer" role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 to-animate">
+                <h3 class="section-title">Про нас</h3>
+                <p>Мы сделаем вашу жизнь веселей</p>
+                <p class="copy-right">&copy; 2021 Школа яхтинга <br>Все права защищены<br>
+                    </p>
+            </div>
+
+            <div class="col-md-4 to-animate">
+                <h3 class="section-title">Наши котакты</h3>
+                <ul class="contact-info">
+                    <li><i class="icon-map-marker"></i>Жмеренка</li>
+                    <li><i class="icon-phone"></i>+38 050 000 00 00</li>
+                    <li><i class="icon-envelope"></i><a href="#">captain@yoursite.com</a></li>
+                    <li><i class="icon-globe2"></i><a href="#">www.yoursite.com</a></li>
+                </ul>
+                <h3 class="section-title">Мы в социальных сетях</h3>
+                <ul class="social-media">
+                    <li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
+                    <li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
+                    <li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
+                    <li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 to-animate">
+                <h3 class="section-title">Связаться с нами</h3>
+                <form action="#fh5co-footer" method="post" class="php-email-form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name" class="sr-only">Имя</label>
+                        {{ form.name }}
+                        <!-- <input type="name" class="form-control" id="name" placeholder="Ваше имя"> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="sr-only">Email</label>
+                        {{ form.user_email }}
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="sr-only">Subject</label>
+                        {{ form.subject }}
+                        <!-- <input type="email" class="form-control" id="email" placeholder="Ваш Email"> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="sr-only">Сообщение</label>
+                        {{ form.message }}
+                        <!-- <textarea class="form-control" id="message" rows="7" placeholder="Введите сообщение"></textarea> -->
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" id="btn-submit" class="btn btn-send-message btn-md" value="Отправить сообщение">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+

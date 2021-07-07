@@ -1,0 +1,83 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{% trans 'page title' %}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{% trans 'description' %}" />
+	<meta name="keywords" content="{% trans 'Keywords, list' %}" />
+	<meta name="author" content="{% trans 'meta author' %}" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+	<link rel="apple-touch-icon" href="{% static 'apple-touch-icon.png' %}">
+
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>	
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+	<link rel="stylesheet" href="{% static 'css/simple-line-icons.css' %}">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'aos/aos.css' %}" >
+	<!-- <link rel="preload" href="stylesheet.css" as="style" onload="this.rel='stylesheet'"> -->
+	<link href="{% static 'boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+	<link href="{% static 'glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+	<link href="{% static 'remixicon/remixicon.css' %}" rel="stylesheet">
+	<link href="{% static 'swiper/swiper-bundle.min.css' %}" rel="stylesheet">  
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{% static 'js/respond.min.js' %}"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+
+	{% include "yacht01/header.html" %}	
+	{% include "yacht01/home.html" %}
+	{% include "yacht01/school.html" %}
+	
+	{% include "yacht01/interest.html" %}
+	{% include "yacht01/travel.html" %}
+	{% include "yacht01/portfolio.html" %}
+	{% include "yacht01/faq.html" %}
+	<hr>
+	{% include "yacht01/contacts.html" %}
+	<!-- jQuery -->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	<script src="{% static 'aos/aos.js' %}"></script>	
+	<!-- Bootstrap -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'glightbox/js/glightbox.min.js' %}"></script>
+	<script src="{% static 'isotope-layout/isotope.pkgd.min.js' %}"></script>
+	<script src="{% static 'purecounter/purecounter.js' %}"></script>
+	<script src="{% static 'swiper/swiper-bundle.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+	<!-- Owl Carousel -->
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<!-- Main JS (Do not remove) -->
+	<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>
+
